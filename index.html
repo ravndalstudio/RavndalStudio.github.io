@@ -250,6 +250,16 @@
             text-decoration: underline;
         }
 
+        .contact-intro {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .location-text {
+            color: var(--text-light);
+        }
+
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -318,7 +328,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">Ravndal Studio</a>
+            <a href="#home" class="logo">Ravndal Studio</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -361,17 +371,17 @@
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">💼</div>
+                    <div class="service-icon" aria-hidden="true">💼</div>
                     <h3>Consulting</h3>
                     <p>Professional consulting services tailored to your specific business needs. We provide expert guidance and strategic insights.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🎨</div>
+                    <div class="service-icon" aria-hidden="true">🎨</div>
                     <h3>Design</h3>
                     <p>Creative design solutions that bring your vision to life with attention to detail and aesthetic excellence.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">⚡</div>
+                    <div class="service-icon" aria-hidden="true">⚡</div>
                     <h3>Development</h3>
                     <p>Custom development services using modern technologies and best practices to build robust solutions.</p>
                 </div>
@@ -384,13 +394,13 @@
         <div class="container">
             <h2 class="section-title">Get in Touch</h2>
             <div class="contact-content">
-                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">
+                <p class="contact-intro">
                     Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
                 </p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <strong>Location</strong>
-                        <span style="color: var(--text-light);">Sandnes, Norway</span>
+                        <span class="location-text">Sandnes, Norway</span>
                     </div>
                     <div class="contact-item">
                         <strong>Email</strong>
