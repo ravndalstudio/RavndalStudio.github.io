@@ -8,8 +8,6 @@ function loadNavigation() {
                 <li><a href="services.html">Tjenester</a></li>
                 <li><a href="portfolio.html">Portefølje</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="privacy.html">Personvern</a></li>
-                <li><a href="privacy-en.html">Privacy (EN)</a></li>
             </ul>
             <ul class="icons">
                 <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
