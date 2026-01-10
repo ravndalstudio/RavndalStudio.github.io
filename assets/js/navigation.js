@@ -38,5 +38,10 @@ function loadNavigation() {
     }
 }
 
-// Load navigation when DOM is ready
-document.addEventListener('DOMContentLoaded', loadNavigation);
+// Load navigation immediately if possible; otherwise wait for DOMContentLoaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadNavigation);
+} else {
+    // DOM already ready — insert nav now so other scripts (e.g. main.js) can find it
+    loadNavigation();
+}
