@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<!-- Norwegian Checklist (moved) -->
 <html lang="no">
     <head>
         <title>Checklist app | Ravndal Studio</title>
@@ -9,149 +8,190 @@
         <link rel="stylesheet" href="../../assets/css/main.css" />
         <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
         <style>
-        .feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin:1rem 0}
-        .feature-item{display:flex;gap:.75rem;align-items:flex-start}
-        .feature-item i{font-size:1.6rem;color:#2d8f3a}
-        .pricing-table{width:100%;border-collapse:collapse;margin:1rem 0}
-        .pricing-table th,.pricing-table td{border:1px solid #e6e6e6;padding:0.9rem;text-align:center}
-        .pricing-table th{background:#f7f7f7}
-        .pricing-table .best{position:relative}
-        /* Flytt badge til toppen høyre for Pro-kolonnen */
-        .pricing-table .best::before{content:"Beste valg";position:absolute;top:-14px;right:12px;left:auto;background:#2d8f3a;color:#fff;padding:4px 8px;font-size:0.7rem;border-radius:12px}
-        .pricing-table .yes{color:#2d8f3a;font-weight:600}
-        #store-links{margin-top:0.5rem}
-        .download-sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;background:#2d8f3a;color:#fff;padding:12px 16px;border-radius:8px;text-align:center;font-weight:700;z-index:999}
-        @media (max-width:768px){.download-sticky{display:block}}
-        .pricing-wrap{overflow:auto}
+            /* Layout for Showcase */
+            .showcase-container { display: flex; gap: 2rem; align-items: center; margin: 2rem 0 4rem 0; text-align: left; }
+            .showcase-images{display:flex;gap:0;flex:1;align-items:stretch}
+            .showcase-frame{flex:1 1 0;display:block;overflow:hidden}
+            .showcase-frame img{width:100%;height:420px;object-fit:cover;border-radius:0;box-shadow:0 10px 30px rgba(0,0,0,0.15);display:block}
+            .showcase-frame:first-child img{border-radius:20px 0 0 20px}
+            .showcase-frame:last-child img{border-radius:0 20px 20px 0}
+            .showcase-content{flex:1}
+            .showcase-content h3{margin-top:0;font-size:2rem}
+
+            /* Feature Grid - Now with 3 columns on PC for all 6 points */
+            .feature-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:2rem;margin:2rem 0}
+            .feature-item{display:flex;gap:1rem;align-items:flex-start; text-align: left;}
+            .feature-item i{font-size:1.8rem;color:#2d8f3a;min-width:32px}
+            
+            /* Pricing Table */
+            .pricing-table{width:100%;border-collapse:collapse;margin:1rem 0}
+            .pricing-table th,.pricing-table td{border:1px solid #e6e6e6;padding:1rem;text-align:center}
+            .pricing-table th{background:#f7f7f7}
+            .best-header { position: relative; background: #f0f9f1 !important; }
+            .best-header::before {
+                content: "Beste valg"; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+                background: #2d8f3a; color: #fff; padding: 4px 12px; font-size: 0.7rem; border-radius: 12px; white-space: nowrap; font-weight: bold;
+            }
+            .best-col { background: #f0f9f1; }
+            .save-tag { color: #e67e22; font-weight: bold; font-size: 0.8rem; display: block; margin-top: 4px; }
+            .billing-type { font-size: 0.75rem; color: #888; display: block; font-weight: normal; margin-top: 2px; }
+
+            /* Gallery Grid */
+            .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:2rem}
+            .gallery-grid img{width:100%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);cursor:pointer}
+
+            .download-sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;background:#2d8f3a;color:#fff;padding:12px 16px;border-radius:8px;text-align:center;font-weight:700;z-index:999;text-decoration:none;}
+            
+            .use-cases { padding: 2rem 0; text-align: center; }
+            .use-case-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; max-width: 900px; margin: 1rem auto; }
+            .use-case-list li { padding: 1rem; background: #f9f9f9; border-radius: 8px; font-size: 1.1rem; }
+            
+            @media (max-width:900px){
+                .showcase-container { flex-direction: column; text-align: center; }
+                .showcase-images{width:100%;}
+                .download-sticky{display:block}
+            }
         </style>
     </head>
     <body class="is-preload">
-        <!-- Wrapper -->
-            <div id="wrapper" class="fade-in">
+        <div id="wrapper" class="fade-in">
 
-                <!-- Header -->
-                    <header id="header">
-                        <a href="../../index.html" class="logo">Ravndal Studio</a>
+            <header id="header">
+                <a href="../../index.html" class="logo">Ravndal Studio</a>
+            </header>
+
+            <div id="main">
+                <article class="post featured">
+                    <header class="major">
+                        <span class="date">2026 Edition</span>
+                        <h2>Organiser livet ditt på sekunder  del med de som betyr noe.</h2>
+                        <p>Bygget for oppgavene du gjør om og om igjen. Et profesjonelt sjekklisteverktøy som kombinerer gjentakende rutiner med vår nye sanntids sky- og delingsteknologi.</p>
+                        <p style="font-size: 0.9em; margin-top: 0.5em;"><a href="../en/">Åpne engelsk versjon</a></p>
                     </header>
 
-                <!-- App-specific nav will be loaded by appnav.js -->
-                    <div id="main">
-                        <!-- Hero / Featured -->
-                            <article class="post featured">
-                                <header class="major">
-                                    <span class="date">2025</span>
-                                    <h2>Organiser livet ditt på sekunder — del med de som betyr noe.</h2>
-                                    <p>En lett og vennlig app for huskelister og gjøremål. Bruk den alene eller del med familie og kollegaer når du trenger det.</p>
-                                    <p><a href="#store-links" class="button primary">Last ned nå</a></p>
-                                </header>
-                                <div class="hero-row">
-                                    <a href="#" class="image left"><img src="../../images/checklist_app_icon.png" alt="Checklist app" class="app-icon"/></a>
-                                    <div>
-                                        <ul class="actions special">
-                                            <li><a href="#" class="button primary">Prøv gratis</a></li>
-                                            <li><a href="#features" class="button">Se funksjoner</a></li>
-                                            <li><a href="../index.html" class="button">English</a></li>
-                                        </ul>
-                                        <p class="muted">Start gratis — behold listene dine lokalt eller logg inn for å synke dem trygt.</p>
-                                        <div id="store-links" class="badges">
-                                            <a href="https://apps.apple.com/us/app/id6751971775" target="_blank" rel="noopener noreferrer" class="badge-link">
-                                                <img src="../../images/apps/checklist/badge-appstore.svg" alt="Download on the App Store" class="badge-img">
-                                            </a>
-                                            <a href="https://play.google.com/store/apps/details?id=com.famravndal.checklist" target="_blank" rel="noopener noreferrer" class="badge-link">
-                                                <img src="../../images/apps/checklist/badge-googleplay.png" alt="Get it on Google Play" class="badge-img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- Screenshots gallery -->
-                            <article>
-                                <header>
-                                    <h3>Se appen i bruk</h3>
-                                </header>
-                                <div class="gallery">
-                                    <img src="../../images/apps/checklist/no/01.png" alt="Skjermbilde 1" class="screenshot">
-                                    <img src="../../images/apps/checklist/no/02.png" alt="Skjermbilde 2" class="screenshot">
-                                    <img src="../../images/apps/checklist/no/03.png" alt="Skjermbilde 3" class="screenshot">
-                                    <img src="../../images/apps/checklist/no/04.png" alt="Skjermbilde 4" class="screenshot">
-                                </div>
-                            </article>
-
-                        <!-- Features -->
-                            <section id="features" class="posts">
-                                <article>
-                                    <header>
-                                        <h2>Hva gjør Checklist nyttig?</h2>
-                                    </header>
-                                    <div class="feature-grid">
-                                        <div class="feature-item"><i class="fas fa-cloud"></i><div><strong>Synk når du vil</strong><div class="muted">Valgfri sky-synk holder listene oppdatert mellom enheter.</div></div></div>
-                                        <div class="feature-item"><i class="fas fa-users"></i><div><strong>Enkel deling</strong><div class="muted">Inviter familie og kollegaer til å samarbeide på lister.</div></div></div>
-                                        <div class="feature-item"><i class="fas fa-shield-alt"></i><div><strong>Personvern først</strong><div class="muted">Dine data er dine — lokal-først design med valgfri synk.</div></div></div>
-                                        <div class="feature-item"><i class="fas fa-bell"></i><div><strong>Smarte påminnelser</strong><div class="muted">Glem aldri viktige gjøremål.</div></div></div>
-                                    </div>
-                                </article>
-                                <article>
-                                    <header>
-                                        <h2>Hurtigoversikt</h2>
-                                    </header>
-                                    <p>Velg det som passer: Gratis for enkel bruk, Standard for flere lister og færre begrensninger, eller Pro for full synk og deling.</p>
-                                    <div class="pricing-wrap">
-                                    <table class="pricing-table">
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>Gratis</th>
-                                                <th>Standard</th>
-                                                <th class="best">Pro</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr><td>Pris</td><td>Gratis</td><td>kr 29 / mån</td><td>kr 49 / mån</td></tr>
-                                            <tr><td>Offline bruk</td><td class="yes">✅</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-                                            <tr><td>Flere lister</td><td>-</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-                                            <tr><td>Synk mellom enheter</td><td>-</td><td>-</td><td class="yes">✅</td></tr>
-                                            <tr><td>Deling og samarbeid</td><td>-</td><td>-</td><td class="yes">✅</td></tr>
-                                        </tbody>
-                                    </table>
-                                    </div>
-                                </article>
-                                <article>
-                                    <header>
-                                        <h2>Trygghet & personvern</h2>
-                                    </header>
-                                    <p>Dine lister er dine. Vi tar personvern på alvor — les mer i vår <a href="privacy.html">personvernpolicy</a>.</p>
-                                </article>
-                            </section>
-                    </div>
-                    <!-- Trust / Privacy -->
-                    <section class="trust" style="padding:1.25rem 1rem;background:#f8f9f9;border-top:1px solid #eee">
-                        <div style="max-width:980px;margin:0 auto;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between">
-                            <div style="display:flex;gap:.6rem;align-items:center"><i class="fas fa-lock" style="color:#2d8f3a"></i><strong>Personvern først</strong><span class="muted">— dine lister er dine; synk er valgfritt og sikkert.</span></div>
-                            <div style="display:flex;gap:.6rem;align-items:center"><i class="fas fa-flag" style="color:#2d8f3a"></i><strong>Stolt utviklet i Norge</strong></div>
+                    <div class="showcase-container">
+                        <div class="showcase-images">
+                            <div class="showcase-frame"><img src="../../images/apps/checklist/no/01.png" alt="Checklist Hjem"></div>
+                            <div class="showcase-frame"><img src="../../images/apps/checklist/no/02.png" alt="Checklist Detalj"></div>
                         </div>
-                    </section>
+                        <div class="showcase-content">
+                            <h3>Pålitelige rutiner</h3>
+                            <p>Hver liste er gjenbrukbar. Du mister den ikke når du fullfører denbare tilbakestill og bruk igjen. Forebygg feil i oppgaver du gjør sjelden og reduser din mentale belastning med vår smarte skyløsning.</p>
+                            <ul class="actions">
+                                <li><a href="#store-links" class="button primary">Start gratis</a></li>
+                            </ul>
+                            <div class="badges" id="store-links">
+                                <a href="https://apps.apple.com/us/app/id6751971775" target="_blank"><img src="../../images/apps/checklist/badge-appstore.svg" alt="App Store" style="height: 40px;"></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.famravndal.checklist" target="_blank"><img src="../../images/apps/checklist/badge-googleplay.png" alt="Google Play" style="height: 40px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                <!-- Footer -->
-                    <footer id="footer">
-                        <section>
-                            <p>&copy; 2025 Ravndal Studio | Enkeltpersonforetak | Sandnes, Norge</p>
-                        </section>
-                    </footer>
+                <section id="features">
+                    <header style="text-align: center;">
+                        <h2>Hvorfor velge Checklist?</h2>
+                        <p>Den perfekte balansen mellom kraftfulle funksjoner og rolig pålitelighet.</p>
+                    </header>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-cloud"></i>
+                            <div><strong>Ny skyløsning</strong><div class="muted">Rask, valgfri sky-synk med automatisk sikkerhetskopiering. Start en liste på telefonen din, fullfør den på nettbrettet.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <div><strong>Sømløs deling</strong><div class="muted">Inviter familie eller kolleger til å samarbeide. Perfekt for å koordinere hytteforberedelser, båtvedlikehold eller håndtere komplekse oppgaver på arbeidsplassen.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-redo"></i>
+                            <div><strong>Gjenbrukbar og gjentakende</strong><div class="muted">Bygget for rutiner. Fullfør den, tilbakestill med ett trykk, og den er klar for neste gang.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div><strong>Stedsutløst</strong><div class="muted">Smarte lister som dukker opp automatisk når du ankommer hytta, båten eller arbeidsplassen.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div><strong>Personvern først</strong><div class="muted">Dine data forblir dine  utviklet i Norge med et lokal-først design som respekterer ditt personvern.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <div><strong>Designet for ro</strong><div class="muted">Ingen rotete tavler eller konstante varsler. Bare de riktige stegene nøyaktig når og hvor du trenger dem.</div></div>
+                        </div>
+                    </div>
+                </section>
 
+                <article id="pricing">
+                    <header><h2>Planer og priser</h2></header>
+                    <div class="pricing-wrap" style="overflow-x: auto;">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr><th>Funksjon</th><th>Gratis</th><th>Standard</th><th class="best-header">Pro</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Pris</strong></td>
+                                    <td><strong>Gratis</strong></td>
+                                    <td><strong>kr 49</strong><span class="billing-type">Engangsbetaling</span></td>
+                                    <td class="best-col"><strong>kr 59</strong><span class="billing-type">Per måned</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hele året</strong></td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="best-col"><strong>kr 249</strong><span class="save-tag">Spar 67%</span><span class="billing-type">Faktureres årlig</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sjekklister</strong></td>
+                                    <td>Opp til 3</td>
+                                    <td>Opp til 6</td>
+                                    <td class="best-col"><strong>Ubegrenset</strong></td>
+                                </tr>
+                                <tr><td>Sky-synk og sikkerhetskopiering</td><td>-</td><td>-</td><td class="best-col">✅</td></tr>
+                                <tr><td>Deling og samarbeid</td><td>-</td><td>-</td><td class="best-col">✅</td></tr>
+                                <tr><td>Fjern annonser</td><td>-</td><td>✅</td><td class="best-col">✅</td></tr>
+                                <tr><td>Offline tilgang</td><td>✅</td><td>✅</td><td class="best-col">✅</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article style="text-align: center; padding: 2rem 2rem;">
+                    <h2 style="font-style: italic;">"Slutt å spørre: Hva var det jeg skulle gjøre her igjen?"</h2>
+                    <p><strong>Begynn å stole på prosessen din.</strong></p>
+                    <div class="gallery-grid">
+                        <a href="../../images/apps/checklist/no/03.png"><img src="../../images/apps/checklist/no/03.png" alt="Skjermbilde 03"></a>
+                        <a href="../../images/apps/checklist/no/04.png"><img src="../../images/apps/checklist/no/04.png" alt="Skjermbilde 04"></a>
+                        <a href="../../images/apps/checklist/no/05.png"><img src="../../images/apps/checklist/no/05.png" alt="Skjermbilde 05"></a>
+                        <a href="../../images/apps/checklist/no/06.png"><img src="../../images/apps/checklist/no/06.png" alt="Skjermbilde 06"></a>
+                        <a href="../../images/apps/checklist/no/07.png"><img src="../../images/apps/checklist/no/07.png" alt="Skjermbilde 07"></a>
+                        <a href="../../images/apps/checklist/no/08.png"><img src="../../images/apps/checklist/no/08.png" alt="Skjermbilde 08"></a>
+                    </div>
+                </article>
+
+                <section class="use-cases">
+                    <header style="text-align: center;">
+                        <h2>Perfekt for:</h2>
+                        <p>Koble en sjekkliste til en GPS-plassering eller adresse. Når du ankommer, er den klar.</p>
+                    </header>
+                    <ul class="use-case-list">
+                        <li>🏠 Hytte åpning/stenging</li>
+                        <li>⛵ Båt lansering og vinterforberedelse</li>
+                        <li>✈️ Reise avreise</li>
+                        <li>🚗 Kjøretøy vedlikehold</li>
+                        <li>🏗️ Arbeidsplass oppgaver</li>
+                        <li>🗓️ Ukentlige rutiner</li>
+                    </ul>
+                </section>
             </div>
+            
+            <footer id="footer">
+                <section>
+                    <p>&copy; 2026 Ravndal Studio | Sandnes, Norge | <a href="privacy.html">Personvernerklæring</a></p>
+                </section>
+            </footer>
+        </div>
 
-        <a href="#store-links" class="download-sticky">Last ned</a>
-
-        <!-- Scripts -->
-            <script src="../../assets/js/jquery.min.js"></script>
-            <script src="../../assets/js/jquery.scrollex.min.js"></script>
-            <script src="../../assets/js/jquery.scrolly.min.js"></script>
-            <script src="../../assets/js/browser.min.js"></script>
-            <script src="../../assets/js/breakpoints.min.js"></script>
-            <script src="../../assets/js/util.js"></script>
-            <script src="../appnav.js"></script>
-            <script src="../../assets/js/main.js"></script>
-
+        <a href="#store-links" class="download-sticky">Last ned appen</a>
     </body>
 </html>

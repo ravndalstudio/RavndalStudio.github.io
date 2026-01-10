@@ -9,13 +9,7 @@
         <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
         <style>
             /* Layout for Showcase */
-            .showcase-container {
-                display: flex;
-                gap: 2rem;
-                align-items: center;
-                margin: 2rem 0 4rem 0;
-                text-align: left;
-            }
+            .showcase-container { display: flex; gap: 2rem; align-items: center; margin: 2rem 0 4rem 0; text-align: left; }
             .showcase-images{display:flex;gap:0;flex:1;align-items:stretch}
             .showcase-frame{flex:1 1 0;display:block;overflow:hidden}
             .showcase-frame img{width:100%;height:420px;object-fit:cover;border-radius:0;box-shadow:0 10px 30px rgba(0,0,0,0.15);display:block}
@@ -24,50 +18,39 @@
             .showcase-content{flex:1}
             .showcase-content h3{margin-top:0;font-size:2rem}
 
-            /* Gallery Grid */
-            .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));gap:1.5rem;margin-top:2rem}
-            .gallery-grid img{width:100%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);cursor:pointer}
-
-            /* Pricing Table Professional Version */
+            /* Feature Grid - Now with 3 columns on PC for all 6 points */
+            .feature-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:2rem;margin:2rem 0}
+            .feature-item{display:flex;gap:1rem;align-items:flex-start; text-align: left;}
+            .feature-item i{font-size:1.8rem;color:#2d8f3a;min-width:32px}
+            
+            /* Pricing Table */
             .pricing-table{width:100%;border-collapse:collapse;margin:1rem 0}
             .pricing-table th,.pricing-table td{border:1px solid #e6e6e6;padding:1rem;text-align:center}
             .pricing-table th{background:#f7f7f7}
-            
-            .best-header {
-                position: relative;
-                background: #f0f9f1 !important;
-            }
+            .best-header { position: relative; background: #f0f9f1 !important; }
             .best-header::before {
-                content: "Best Value";
-                position: absolute;
-                top: -14px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: #2d8f3a;
-                color: #fff;
-                padding: 4px 12px;
-                font-size: 0.7rem;
-                border-radius: 12px;
-                white-space: nowrap;
-                font-weight: bold;
+                content: "Best Value"; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+                background: #2d8f3a; color: #fff; padding: 4px 12px; font-size: 0.7rem; border-radius: 12px; white-space: nowrap; font-weight: bold;
             }
             .best-col { background: #f0f9f1; }
             .save-tag { color: #e67e22; font-weight: bold; font-size: 0.8rem; display: block; margin-top: 4px; }
             .billing-type { font-size: 0.75rem; color: #888; display: block; font-weight: normal; margin-top: 2px; }
-            
+
+            /* Gallery Grid */
+            .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:2rem}
+            .gallery-grid img{width:100%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);cursor:pointer}
+
             .download-sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;background:#2d8f3a;color:#fff;padding:12px 16px;border-radius:8px;text-align:center;font-weight:700;z-index:999;text-decoration:none;}
+            
+            .use-cases { padding: 2rem 0; text-align: center; }
+            .use-case-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; max-width: 900px; margin: 1rem auto; }
+            .use-case-list li { padding: 1rem; background: #f9f9f9; border-radius: 8px; font-size: 1.1rem; }
             
             @media (max-width:900px){
                 .showcase-container { flex-direction: column; text-align: center; }
                 .showcase-images{width:100%;}
-                .showcase-frame{flex-basis:46vw}
                 .download-sticky{display:block}
             }
-
-            /* Lightbox */
-            #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:1200;align-items:center;justify-content:center}
-            #lightbox img{max-width:92%;max-height:88%;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,0.6);display:block}
-            #lightbox .lb-close{position:absolute;top:16px;right:18px;background:transparent;border:none;color:#fff;font-size:30px;cursor:pointer}
         </style>
     </head>
     <body class="is-preload">
@@ -82,7 +65,8 @@
                     <header class="major">
                         <span class="date">2026 Edition</span>
                         <h2>Organize your life in seconds — shared with the people who matter.</h2>
-                        <p>A professional checklist tool for individuals and teams who value speed, privacy, and collaboration.</p>
+                        <p>Built for the tasks you do over and over. A professional checklist tool that combines recurring routines with our new real-time cloud and sharing technology.</p>
+                        <p style="font-size: 0.9em; margin-top: 0.5em;"><a href="../no/">Open Norwegian version</a></p>
                     </header>
 
                     <div class="showcase-container">
@@ -91,8 +75,8 @@
                             <div class="showcase-frame"><img src="../../images/apps/checklist/en/02.png" alt="Checklist Detail"></div>
                         </div>
                         <div class="showcase-content">
-                            <h3>Elegant & Fast</h3>
-                            <p>Experience an interface designed for the modern user. Quickly add items, categorize your tasks, and get a clear overview of your day.</p>
+                            <h3>Trusted Routines</h3>
+                            <p>Every list is reusable. You do not lose it when you complete it—just reset and use again. Prevent mistakes in tasks you do infrequently and reduce your mental load with our smart cloud solution.</p>
                             <ul class="actions">
                                 <li><a href="#store-links" class="button primary">Start for free</a></li>
                             </ul>
@@ -104,58 +88,77 @@
                     </div>
                 </article>
 
+                <section id="features">
+                    <header style="text-align: center;">
+                        <h2>Why choose Checklist?</h2>
+                        <p>The perfect balance of powerful features and calm reliability.</p>
+                    </header>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-cloud"></i>
+                            <div><strong>New Cloud Solution</strong><div class="muted">Fast, optional cloud sync with automatic backup. Start a list on your phone, finish it on your tablet.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <div><strong>Seamless Sharing</strong><div class="muted">Seamless Sharing Invite family or teammates to collaborate. Perfect for coordinating cabin prep, boat maintenance, or managing complex tasks on the worksite.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-redo"></i>
+                            <div><strong>Reusable & Recurring</strong><div class="muted">Built for routines. Complete it, reset it with one tap, and it's ready for next time.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div><strong>Location Triggered</strong><div class="muted">Smart lists that appear automatically when you arrive at the cabin, boat, or worksite.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div><strong>Privacy-first</strong><div class="muted">Your data stays yours — developed in Norway with a local-first design that respects your privacy.</div></div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <div><strong>Designed for Calm</strong><div class="muted">No cluttered boards or constant notifications. Just the right steps exactly when and where you need them.</div></div>
+                        </div>
+                    </div>
+                </section>
+
                 <article id="pricing">
                     <header><h2>Plans & Pricing</h2></header>
                     <div class="pricing-wrap" style="overflow-x: auto;">
                         <table class="pricing-table">
                             <thead>
-                                <tr>
-                                    <th>Feature</th>
-                                    <th>Free</th>
-                                    <th>Standard</th>
-                                    <th class="best-header">Pro</th>
-                                </tr>
+                                <tr><th>Feature</th><th>Free</th><th>Standard</th><th class="best-header">Pro</th></tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Basic Price</strong></td>
+                                    <td><strong>Price</strong></td>
                                     <td><strong>Free</strong></td>
-                                    <td>
-                                        <strong>$3.99</strong>
-                                        <span class="billing-type">One-time payment</span>
-                                    </td>
-                                    <td class="best-col">
-                                        <strong>$4.99</strong>
-                                        <span class="billing-type">Per month</span>
-                                    </td>
+                                    <td><strong>$3.99</strong><span class="billing-type">One-time payment</span></td>
+                                    <td class="best-col"><strong>$4.99</strong><span class="billing-type">Per month</span></td>
                                 </tr>
                                 <tr>
                                     <td><strong>Full Year</strong></td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td class="best-col">
-                                        <strong>$19.99</strong>
-                                        <span class="save-tag">Save 67%</span>
-                                        <span class="billing-type">Billed annually</span>
-                                    </td>
+                                    <td class="best-col"><strong>$19.99</strong><span class="save-tag">Save 67%</span><span class="billing-type">Billed annually</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Checklists</strong></td>
+                                    <td>Up to 3</td>
+                                    <td>Up to 6</td>
+                                    <td class="best-col"><strong>Unlimited</strong></td>
                                 </tr>
                                 <tr><td>Cloud Sync & Backup</td><td>-</td><td>-</td><td class="best-col">✅</td></tr>
                                 <tr><td>Sharing & Collaboration</td><td>-</td><td>-</td><td class="best-col">✅</td></tr>
-                                <tr><td>Unlimited Lists</td><td>-</td><td>✅</td><td class="best-col">✅</td></tr>
                                 <tr><td>Remove Ads</td><td>-</td><td>✅</td><td class="best-col">✅</td></tr>
                                 <tr><td>Offline Access</td><td>✅</td><td>✅</td><td class="best-col">✅</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                        Standard is a one-time purchase to unlock core features forever. Pro includes all future cloud services and collaboration tools.
-                    </p>
                 </article>
 
-                <article>
-                    <header>
-                        <h3>Explore all features</h3>
-                    </header>
+                <article style="text-align: center; padding: 2rem 2rem;">
+                    <h2 style="font-style: italic;">"Stop asking: What was I supposed to do here again?"</h2>
+                    <p><strong>Start trusting your process.</strong></p>
                     <div class="gallery-grid">
                         <a href="../../images/apps/checklist/en/03.png"><img src="../../images/apps/checklist/en/03.png" alt="Screen 03"></a>
                         <a href="../../images/apps/checklist/en/04.png"><img src="../../images/apps/checklist/en/04.png" alt="Screen 04"></a>
@@ -165,8 +168,22 @@
                         <a href="../../images/apps/checklist/en/08.png"><img src="../../images/apps/checklist/en/08.png" alt="Screen 08"></a>
                     </div>
                 </article>
-            </div>
 
+                <section class="use-cases">
+                    <header style="text-align: center;">
+                        <h2>Perfect for:</h2>
+                    </header>
+                    <ul class="use-case-list">
+                        <li>🏠 Cabin Opening/Closing</li>
+                        <li>⛵ Boat Launch & Winter Prep</li>
+                        <li>✈️ Travel Departure</li>
+                        <li>🚗 Vehicle Maintenance</li>
+                        <li>🏗️ Worksite Tasks</li>
+                        <li>🗓️ Weekly Routines</li>
+                    </ul>
+                </section>
+            </div>
+            
             <footer id="footer">
                 <section>
                     <p>&copy; 2026 Ravndal Studio | Sandnes, Norway | <a href="privacy.html">Privacy Policy</a></p>
@@ -175,34 +192,5 @@
         </div>
 
         <a href="#store-links" class="download-sticky">Download App</a>
-
-        <div id="lightbox" aria-hidden="true">
-            <button class="lb-close">×</button>
-            <img id="lb-image" src="" alt="Screenshot">
-        </div>
-
-        <script src="../../assets/js/jquery.min.js"></script>
-        <script src="../../assets/js/jquery.scrollex.min.js"></script>
-        <script src="../../assets/js/main.js"></script>
-        <script>
-        (function(){
-            var lb = document.getElementById('lightbox');
-            var lbImg = document.getElementById('lb-image');
-            document.querySelectorAll('.gallery-grid a, .showcase-images img').forEach(function(el){
-                el.addEventListener('click', function(e){
-                    e.preventDefault();
-                    lbImg.src = el.getAttribute('href') || el.getAttribute('src');
-                    lb.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-            lb.addEventListener('click', function(e){
-                if(e.target === lb || e.target.className === 'lb-close'){
-                    lb.style.display = 'none';
-                    document.body.style.overflow = '';
-                }
-            });
-        })();
-        </script>
     </body>
 </html>
