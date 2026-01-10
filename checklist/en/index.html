@@ -42,6 +42,12 @@
 
             .download-sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;background:#2d8f3a;color:#fff;padding:12px 16px;border-radius:8px;text-align:center;font-weight:700;z-index:999;text-decoration:none;}
             
+            /* Mobile fallback: portfolio button shown when main nav/menu fails */
+            .portfolio-btn{display:none;text-decoration:none}
+            @media (max-width:900px){
+                .portfolio-btn{display:inline-block;margin-left:10px;padding:6px 10px;background:#2d8f3a;color:#fff;border-radius:6px;font-weight:700}
+            }
+
             .use-cases { padding: 2rem 0; text-align: center; }
             .use-case-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; max-width: 900px; margin: 1rem auto; }
             .use-case-list li { padding: 1rem; background: #f9f9f9; border-radius: 8px; font-size: 1.1rem; }
@@ -58,6 +64,7 @@
 
             <header id="header">
                 <a href="../../index.html" class="logo">Ravndal Studio</a>
+                <a href="../../portfolio.html" class="button small portfolio-btn" aria-label="Open portfolio">Portfolio</a>
             </header>
 
             <div id="main">
