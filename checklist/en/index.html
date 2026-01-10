@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Checklist app | Ravndal Studio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../assets/css/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+        <style>
+            /* Layout for Showcase */
+            .showcase-container {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                margin: 2rem 0 4rem 0;
+                text-align: left;
+            }
+            .showcase-images{display:flex;gap:0;flex:1;align-items:stretch}
+            .showcase-frame{flex:1 1 0;display:block;overflow:hidden}
+            .showcase-frame img{width:100%;height:420px;object-fit:cover;border-radius:0;box-shadow:0 10px 30px rgba(0,0,0,0.15);display:block}
+            .showcase-frame:first-child img{border-radius:20px 0 0 20px}
+            .showcase-frame:last-child img{border-radius:0 20px 20px 0}
+            .showcase-content{flex:1}
+            .showcase-content h3{margin-top:0;font-size:2rem}
+
+            /* Gallery Grid */
+            .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));gap:1.5rem;margin-top:2rem}
+            .gallery-grid img{width:100%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);cursor:pointer}
+
+            /* Pricing Table Professional Version */
+            .pricing-table{width:100%;border-collapse:collapse;margin:1rem 0}
+            .pricing-table th,.pricing-table td{border:1px solid #e6e6e6;padding:1rem;text-align:center}
+            .pricing-table th{background:#f7f7f7}
+            
+            .best-header {
+                position: relative;
+                background: #f0f9f1 !important;
+            }
+            .best-header::before {
+                content: "Best Value";
+                position: absolute;
+                top: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #2d8f3a;
+                color: #fff;
+                padding: 4px 12px;
+                font-size: 0.7rem;
+                border-radius: 12px;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+            .best-col { background: #f0f9f1; }
+            .save-tag { color: #e67e22; font-weight: bold; font-size: 0.8rem; display: block; margin-top: 4px; }
+            .billing-type { font-size: 0.75rem; color: #888; display: block; font-weight: normal; margin-top: 2px; }
+            
+            .download-sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;background:#2d8f3a;color:#fff;padding:12px 16px;border-radius:8px;text-align:center;font-weight:700;z-index:999;text-decoration:none;}
+            
+            @media (max-width:900px){
+                .showcase-container { flex-direction: column; text-align: center; }
+                .showcase-images{width:100%;}
+                .showcase-frame{flex-basis:46vw}
+                .download-sticky{display:block}
+            }
+
+            /* Lightbox */
+            #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:1200;align-items:center;justify-content:center}
+            #lightbox img{max-width:92%;max-height:88%;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,0.6);display:block}
+            #lightbox .lb-close{position:absolute;top:16px;right:18px;background:transparent;border:none;color:#fff;font-size:30px;cursor:pointer}
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper" class="fade-in">
+
+            <header id="header">
+                <a href="../../index.html" class="logo">Ravndal Studio</a>
+            </header>
+
+            <div id="main">
+                <article class="post featured">
+                    <header class="major">
+                        <span class="date">2026 Edition</span>
+                        <h2>Organize your life in seconds — shared with the people who matter.</h2>
+                        <p>A professional checklist tool for individuals and teams who value speed, privacy, and collaboration.</p>
+                    </header>
+
+                    <div class="showcase-container">
+                        <div class="showcase-images">
+                            <div class="showcase-frame"><img src="../../images/apps/checklist/en/01.png" alt="Checklist Home"></div>
+                            <div class="showcase-frame"><img src="../../images/apps/checklist/en/02.png" alt="Checklist Detail"></div>
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Elegant & Fast</h3>
+                            <p>Experience an interface designed for the modern user. Quickly add items, categorize your tasks, and get a clear overview of your day.</p>
+                            <ul class="actions">
+                                <li><a href="#store-links" class="button primary">Start for free</a></li>
+                            </ul>
+                            <div class="badges" id="store-links">
+                                <a href="https://apps.apple.com/us/app/id6751971775" target="_blank"><img src="../../images/apps/checklist/badge-appstore.svg" alt="App Store" style="height: 40px;"></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.famravndal.checklist" target="_blank"><img src="../../images/apps/checklist/badge-googleplay.png" alt="Google Play" style="height: 40px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="pricing">
+                    <header><h2>Plans & Pricing</h2></header>
+                    <div class="pricing-wrap" style="overflow-x: auto;">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Free</th>
+                                    <th>Standard</th>
+                                    <th class="best-header">Pro</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Basic Price</strong></td>
+                                    <td><strong>Free</strong></td>
+                                    <td>
+                                        <strong>$3.99</strong>
+                                        <span class="billing-type">One-time payment</span>
+                                    </td>
+                                    <td class="best-col">
+                                        <strong>$4.99</strong>
+                                        <span class="billing-type">Per month</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Full Year</strong></td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="best-col">
+                                        <strong>$19.99</strong>
+                                        <span class="save-tag">Save 67%</span>
+                                        <span class="billing-type">Billed annually</span>
+                                    </td>
+                                </tr>
+                                <tr><td>Cloud Sync & Backup</td><td>-</td><td>-</td><td class="best-col">✅</td></tr>
+                                <tr><td>Sharing & Collaboration</td><td>-</td><td>-</td><td class="best-col">✅</td></tr>
+                                <tr><td>Unlimited Lists</td><td>-</td><td>✅</td><td class="best-col">✅</td></tr>
+                                <tr><td>Remove Ads</td><td>-</td><td>✅</td><td class="best-col">✅</td></tr>
+                                <tr><td>Offline Access</td><td>✅</td><td>✅</td><td class="best-col">✅</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                        Standard is a one-time purchase to unlock core features forever. Pro includes all future cloud services and collaboration tools.
+                    </p>
+                </article>
+
+                <article>
+                    <header>
+                        <h3>Explore all features</h3>
+                    </header>
+                    <div class="gallery-grid">
+                        <a href="../../images/apps/checklist/en/03.png"><img src="../../images/apps/checklist/en/03.png" alt="Screen 03"></a>
+                        <a href="../../images/apps/checklist/en/04.png"><img src="../../images/apps/checklist/en/04.png" alt="Screen 04"></a>
+                        <a href="../../images/apps/checklist/en/05.png"><img src="../../images/apps/checklist/en/05.png" alt="Screen 05"></a>
+                        <a href="../../images/apps/checklist/en/06.png"><img src="../../images/apps/checklist/en/06.png" alt="Screen 06"></a>
+                        <a href="../../images/apps/checklist/en/07.png"><img src="../../images/apps/checklist/en/07.png" alt="Screen 07"></a>
+                        <a href="../../images/apps/checklist/en/08.png"><img src="../../images/apps/checklist/en/08.png" alt="Screen 08"></a>
+                    </div>
+                </article>
+            </div>
+
+            <footer id="footer">
+                <section>
+                    <p>&copy; 2026 Ravndal Studio | Sandnes, Norway | <a href="privacy.html">Privacy Policy</a></p>
+                </section>
+            </footer>
+        </div>
+
+        <a href="#store-links" class="download-sticky">Download App</a>
+
+        <div id="lightbox" aria-hidden="true">
+            <button class="lb-close">×</button>
+            <img id="lb-image" src="" alt="Screenshot">
+        </div>
+
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../../assets/js/main.js"></script>
+        <script>
+        (function(){
+            var lb = document.getElementById('lightbox');
+            var lbImg = document.getElementById('lb-image');
+            document.querySelectorAll('.gallery-grid a, .showcase-images img').forEach(function(el){
+                el.addEventListener('click', function(e){
+                    e.preventDefault();
+                    lbImg.src = el.getAttribute('href') || el.getAttribute('src');
+                    lb.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            lb.addEventListener('click', function(e){
+                if(e.target === lb || e.target.className === 'lb-close'){
+                    lb.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        })();
+        </script>
+    </body>
+</html>

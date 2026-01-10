@@ -46,14 +46,25 @@ blockquote, q {
 		content: none;
 	}
 
+/* Added utility classes for Checklist landing pages to avoid inline styles */
+.hero-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.app-icon{width:120px;height:120px;object-fit:contain;border-radius:16px}
+.muted{margin-top:8px;color:#666}
+.badges{margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;line-height:0}
+.badge-link{display:inline-block}
+.badge-img{height:44px;width:auto;display:block}
+.gallery{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.screenshot{width:calc(50% - 6px);border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-body {
-	-webkit-text-size-adjust: none;
-}
+	body {
+		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
+	}
 
 mark {
 	background-color: transparent;
