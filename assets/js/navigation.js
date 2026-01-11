@@ -1,5 +1,7 @@
 // Navigation widget for Ravndal Studio
 function loadNavigation() {
+    // If a static nav is already present on the page, do nothing.
+    if (document.getElementById('nav')) return;
     const navHTML = `
         <nav id="nav">
             <ul class="links">
