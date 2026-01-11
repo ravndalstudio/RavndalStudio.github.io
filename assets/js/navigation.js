@@ -37,11 +37,14 @@ function loadNavigation() {
         }, 10);
     }
 }
-
-// Load navigation immediately if possible; otherwise wait for DOMContentLoaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadNavigation);
-} else {
-    // DOM already ready — insert nav now so other scripts (e.g. main.js) can find it
+// Try to insert navigation immediately. If header isn't present yet, also
+// attach a DOMContentLoaded fallback that only inserts if #nav is still missing.
+try {
     loadNavigation();
+} catch (e) {
+    // Ignore and install fallback
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (!document.getElementById('nav')) loadNavigation();
+});
