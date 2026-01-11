@@ -53,6 +53,7 @@ blockquote, q {
 .badges{margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;line-height:0}
 .badge-link{display:inline-block}
 .badge-img{height:44px;width:auto;display:block}
+.new-badge{background:#e67e22;color:#fff;padding:3px 8px;border-radius:12px;font-size:0.75rem;margin-left:8px;font-weight:700;vertical-align:middle;display:inline-block}
 .gallery{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
 .screenshot{width:calc(50% - 6px);border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
 

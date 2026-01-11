@@ -2,14 +2,23 @@
 function loadNavigation() {
     // If a static nav is already present on the page, do nothing.
     if (document.getElementById('nav')) return;
+
+    // Use page language to choose link labels (defaults to Norwegian)
+    const lang = document.documentElement.lang || 'no';
+    const labels = (lang === 'en') ? {
+        home: 'Home', about: 'About', services: 'Services', portfolio: 'Portfolio', contact: 'Contact'
+    } : {
+        home: 'Hjem', about: 'Om Oss', services: 'Tjenester', portfolio: 'Portefølje', contact: 'Kontakt'
+    };
+
     const navHTML = `
         <nav id="nav">
             <ul class="links">
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="about.html">Om Oss</a></li>
-                <li><a href="services.html">Tjenester</a></li>
-                <li><a href="portfolio.html">Portefølje</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html">${labels.home}</a></li>
+                <li><a href="about.html">${labels.about}</a></li>
+                <li><a href="services.html">${labels.services}</a></li>
+                <li><a href="portfolio.html">${labels.portfolio}</a></li>
+                <li><a href="contact.html">${labels.contact}</a></li>
             </ul>
             <ul class="icons">
                 <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
