@@ -15,16 +15,24 @@
             .showcase-frame img{width:100%;height:420px;object-fit:cover;border-radius:0;box-shadow:0 10px 30px rgba(0,0,0,0.15);display:block}
             .showcase-frame:first-child img{border-radius:20px 0 0 20px}
             .showcase-frame:last-child img{border-radius:0 20px 20px 0}
-            <style>
-                /* Checklist styles moved to assets/css/main.css */
-            </style>
+            /* Checklist styles moved to assets/css/main.css */
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper" class="fade-in">
+
+            <header id="header">
+                <a href="../../index.html" class="logo">Ravndal Studio</a>
+                <a href="../../portfolio.html" class="button small portfolio-btn" aria-label="Open portfolio">Portfolio</a>
+            </header>
+
             <nav id="nav">
                 <ul class="links">
-                    <li><a href="../../index.html">Hjem</a></li>
-                    <li><a href="../../about.html">Om Oss</a></li>
-                    <li><a href="../../services.html">Tjenester</a></li>
-                    <li><a href="../../portfolio.html">Portefølje</a></li>
-                    <li><a href="../../contact.html">Kontakt</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../services.html">Services</a></li>
+                    <li><a href="../../portfolio.html">Portfolio</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
                 </ul>
                 <ul class="icons">
                     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -38,7 +46,7 @@
                 <article class="post featured">
                     <header class="major">
                         <span class="date">2026</span>
-                        <h2>Organiser livet ditt på sekunder  del med de som betyr noe.</h2>
+                        <h2>Organiser livet ditt på sekunder – del med de som betyr noe.</h2>
                         <p>Bygget for oppgavene du gjør om og om igjen. Et profesjonelt sjekklisteverktøy som kombinerer gjentakende rutiner med vår nye sanntids sky- og delingsteknologi.</p>
                         <p style="font-size: 0.9em; margin-top: 0.5em;"><a href="../en/">Open English version</a></p>
                     </header>
@@ -49,11 +57,8 @@
                             <div class="showcase-frame"><img src="../../images/apps/checklist/no/02.webp" alt="Checklist Detalj"></div>
                         </div>
                         <div class="showcase-content">
-                            <h3>Pålitelige rutiner</h3>
-                            <p>Hver liste er gjenbrukbar. Du mister den ikke når du fullfører denbare tilbakestill og bruk igjen. Forebygg feil i oppgaver du gjør sjelden og reduser din mentale belastning med vår smarte skyløsning.</p>
-                            <ul class="actions">
-                                <li><a href="#store-links" class="button primary">Start gratis</a></li>
-                            </ul>
+                            <h3>Gjenbrukbare rutiner</h3>
+                            <p>Hver liste er gjenbrukbar. Du mister den ikke når du fullfører den – bare tilbakestill og bruk igjen. Forebygg feil i oppgaver du gjør sjelden og reduser din mentale belastning med vår smarte skyløsning.</p>
                             <div class="badges" id="store-links">
                                 <a href="https://apps.apple.com/us/app/id6751971775" target="_blank"><img src="../../images/apps/badge-appstore.webp" alt="App Store" style="height: 40px;"></a>
                                 <a href="https://play.google.com/store/apps/details?id=com.famravndal.checklist" target="_blank"><img src="../../images/apps/badge-googleplay.webp" alt="Google Play" style="height: 40px;"></a>
@@ -86,7 +91,7 @@
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-shield-alt"></i>
-                            <div><strong>Personvern først</strong><div class="muted">Dine data forblir dine  utviklet i Norge med et lokal-først design som respekterer ditt personvern.</div></div>
+                            <div><strong>Personvern først</strong><div class="muted">Dine data forblir dine – utviklet i Norge med et lokal-først design som respekterer ditt personvern.</div></div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-brain"></i>
@@ -95,26 +100,14 @@
                     </div>
                 </section>
 
-                <article id="pricing">
-                    <header><h2>Planer og priser</h2></header>
+                <!-- <article id="pricing">
+                    <header><h2>Nivåer</h2></header>
                     <div class="pricing-wrap" style="overflow-x: auto;">
                         <table class="pricing-table">
                             <thead>
-                                <tr><th>Funksjon</th><th>Gratis</th><th>Standard</th><th class="best-header">Pro</th></tr>
+                                <tr><th>Funksjon</th><th>Start</th><th>Standard</th><th>Pro</th></tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><strong>Pris</strong></td>
-                                    <td><strong>Gratis</strong></td>
-                                    <td><strong>kr 49</strong><span class="billing-type">Engangsbetaling</span></td>
-                                    <td class="best-col"><strong>kr 59</strong><span class="billing-type">Per måned</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Hele året</strong></td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td class="best-col"><strong>kr 249</strong><span class="save-tag">Spar 67%</span><span class="billing-type">Faktureres årlig</span></td>
-                                </tr>
                                 <tr>
                                     <td><strong>Sjekklister</strong></td>
                                     <td>Opp til 3</td>
@@ -145,13 +138,9 @@
                     </p>
 
                     <p>
-                        Vi viderefører <strong>Standard-planen</strong> som en ren engangsbetaling for de som ønsker en robust, lokal løsning. Denne planen fjerner annonser og øker antall sjekklister, men uten behov for sky-synkronisering, backup eller deling. <strong>Gratis-versjonen</strong> forblir tilgjengelig med de mest grunnleggende funksjonene.
-                    </p>
-
-                    <p>
                         <strong>Lansering:</strong> Versjon 2 planlegges utgitt i løpet av <strong>første kvartal 2026</strong>.
                     </p>
-                </article>
+                </article> -->
 
                 <article style="text-align: center; padding: 2rem 2rem;">
                     <h2 style="font-style: italic;">"Slutt å spørre: Hva var det jeg skulle gjøre her igjen?"</h2>
@@ -179,15 +168,23 @@
                         <li>🗓️ Ukentlige rutiner</li>
                     </ul>
                 </section>
+
+                <section class="posts" style="text-align: center; margin-top: 4rem;" border-top: 0px solid #ddd; padding-top: 2rem;">
+                    <article>
+                        <a href="privacy.html" class="button">Personvernerklæring</a>
+                    </article>
+                    <article>
+                        <a href="terms.html" class="button">Vilkår for bruk (EULA)</a>
+                    </article>
+                </section>
             </div>
-            
+
             <script src="/assets/js/checklist-lightbox.js"></script>
             <footer id="footer">
                 <section>
                     <p>&copy; 2026 Ravndal Studio | Sandnes, Norge | <a href="privacy.html">Personvernerklæring</a></p>
                 </section>
             </footer>
-        </div>
 
         <a href="#store-links" class="download-sticky">Last ned appen</a>
     </body>

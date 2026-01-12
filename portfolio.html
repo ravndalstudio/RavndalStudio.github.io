@@ -1,75 +1,105 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html lang="no">
-	<head>
-		<title>Våre Arbeider - Ravndal Studio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper" class="fade-in">
-			<header id="header">
-				<a href="index.html" class="logo">Ravndal Studio</a>
-			</header>
+    <head>
+        <title>Prosjekter - Ravndal Studio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper" class="fade-in">
+            <header id="header">
+                <a href="index.html" class="logo">Ravndal Studio</a>
+            </header>
 
-			<!-- Nav will be loaded by navigation.js -->
-			<div id="main">
-				<article class="post featured">
-					<header class="major">
-						<span class="date">2025</span>
-						<h2>Våre Arbeider</h2>
-						<p>Utforsk vårt portfolio av digitale løsninger og kreative prosjekter.<br>
-						Fra mobile apper til webutvikling – vi skaper løsninger som gjør en forskjell.</p>
-					</header>
+            <div id="main">
+				<article style="
+					position: relative; 
+					overflow: hidden; 
+					min-height: 600px; /* Sikrer at kortet får litt høyde */
+					display: flex;
+					flex-direction: column;
+					justify-content: center; /* Sentrerer innholdet vertikalt */
+					align-items: center;
+					border-radius: 0px;
+					padding: 20em; /* Luft rundt teksten */
+				">
+
+					<img src="images/ai-generated-manraven.webp" alt="" style="
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: cover; /* Sørger for at bildet dekker alt uten å strekkes */
+						object-position: center 20%; /* Juster % for å flytte fokus opp/ned på bildet */
+						z-index: 1;
+					" />
+
+					<div style="
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: rgba(0, 0, 0, 0.6); /* 0.6 er hvor mørkt det er (0 til 1) */
+						z-index: 2;
+					"></div>
+
+					<div style="
+						position: relative; 
+						z-index: 3; 
+						width: 100%; 
+						color: #ffffff; /* Setter all tekst til hvit */
+					">
+						<header>
+							<h2 style="color: #ffffff;">Laboratoriet</h2>
+							<span class="date" style="color: #dddddd;">Under utforsking</span>
+						</header>
+						
+						<p style="color: #f0f0f0; font-weight: 500;">
+							Dette er stedet for eksperimenter. Fokuset er rettet mot hvordan kunstig intelligens, og hvem vet; kanskje mørke design-temaer vil skape unike brukeropplevelser. Flere konsepter er på tegnebrettet - kanskje det neste blir et spill. Nye prototyper vil publiseres her etter hvert som de tar form.
+						</p>
+						
+						<ul class="actions special">
+							<li>
+								<span class="button disabled" style="box-shadow: inset 0 0 0 2px #ffffff !important; color: #ffffff !important;">Kommer snart</span>
+							</li>
+						</ul>
+					</div>
+
 				</article>
 
-				<section class="posts">
-					<article>
-						<header>
-							<h2>Checklist app</h2>
-							<p class="date">2026</p>
-						</header>
-						<a href="checklist/no/index.html" class="image"><img width=100 src="images/checklist_app_icon.png" alt="Checklist app" /></a>
-						<p>Din digitale sjekkliste-app for struktur, produktivitet og ro i hverdagen. Utviklet med fokus på brukervennlighet, personvern og moderne design.</p>
-						<ul class="actions">
-							<li><a href="checklist/no/index.html" class="button">Les mer om Checklist app</a></li>
-						</ul>
-					</article>
+				<article>
+					<header>
+						<h2>Checklist App</h2>
+						<span class="date">Pilotprosjekt • 2026</span>
+					</header>
+					<a href="checklist/no/index.html" class="image fit"><img src="images/checklist_app_icon.png" alt="Checklist app ikon" style="max-width: 150px; margin: 0 auto; display: block;" /></a>
+					<p>Mitt første fullskala læringsprosjekt. En digital sjekkliste-app designet for å mestre moderne Flutter-arkitektur, lokal databasehåndtering og skysynkronisering. Resultatet er et verktøy for struktur og produktivitet, bygget fra bunnen av.</p>
+					<ul class="actions special">
+						<li><a href="checklist/no/index.html" class="button">Se prosjektet</a></li>
+					</ul>
+				</article>
 
-					<article>
-						<header>
-							<h2>Flere prosjekter kommer snart</h2>
-							<p class="date">2026</p>
-						</header>
-						<p>Vi er i oppstartsfasen og jobber hardt med flere spennende prosjekter. Følg med for oppdateringer!</p>
-						<ul class="actions">
-							<li><a href="contact.html" class="button">Kontakt oss</a></li>
-						</ul>
-					</article>
-				</section>
-			</div>
+                <!-- </section> -->
+            </div>
 
-			<footer id="footer">
-				<section>
-					<p>&copy; 2025 Ravndal Studio | Enkeltpersonforetak | Sandnes, Norge</p>
-				</section>
-			</footer>
-		</div>
+            <footer id="footer">
+                <section>
+                    <p>&copy; 2026 Ravndal Studio | Enkeltpersonforetak | Sandnes, Norge</p>
+                </section>
+            </footer>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/navigation.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+        <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/navigation.js"></script>
+            <script src="assets/js/main.js"></script>
+    </body>
 </html>

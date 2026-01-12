@@ -15,62 +15,7 @@
             .showcase-frame img{width:100%;height:420px;object-fit:cover;border-radius:0;box-shadow:0 10px 30px rgba(0,0,0,0.15);display:block}
             .showcase-frame:first-child img{border-radius:20px 0 0 20px}
             .showcase-frame:last-child img{border-radius:0 20px 20px 0}
-            .showcase-content{flex:1}
-            .showcase-content h3{margin-top:0;font-size:2rem}
-
-            /* Feature Grid - Now with 3 columns on PC for all 6 points */
-            .feature-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:2rem;margin:2rem 0}
-            .feature-item{display:flex;gap:1rem;align-items:flex-start; text-align: left;}
-            .feature-item i{font-size:1.8rem;color:#2d8f3a;min-width:32px}
-            
-            /* Pricing Table */
-            .pricing-table{width:100%;border-collapse:collapse;margin:1rem 0}
-            .pricing-table th,.pricing-table td{border:1px solid #e6e6e6;padding:1rem;text-align:center}
-            .pricing-table th{background:#f7f7f7}
-            .best-header { position: relative; background: #f0f9f1 !important; }
-            .best-header::before {
-                content: "Best Value"; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-                background: #2d8f3a; color: #fff; padding: 4px 12px; font-size: 0.7rem; border-radius: 12px; white-space: nowrap; font-weight: bold;
-            }
-            .best-col { background: #f0f9f1; }
-            .save-tag { color: #e67e22; font-weight: bold; font-size: 0.8rem; display: block; margin-top: 4px; }
-            .billing-type { font-size: 0.75rem; color: #888; display: block; font-weight: normal; margin-top: 2px; }
-
-            /* .new-badge moved to assets/css/main.css */
-
-            /* Gallery Grid */
-            .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:2rem}
-            .gallery-grid img{width:100%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);cursor:pointer}
-
-            .download-sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;background:#2d8f3a;color:#fff;padding:12px 16px;border-radius:8px;text-align:center;font-weight:700;z-index:999;text-decoration:none;}
-            
-            /* Mobile fallback: portfolio button shown when main nav/menu fails */
-            .portfolio-btn{display:none;text-decoration:none}
-            @media (max-width:900px){
-                .portfolio-btn{display:inline-block;margin-left:10px;padding:6px 10px;background:#2d8f3a;color:#fff;border-radius:6px;font-weight:700}
-            }
-
-            .use-cases { padding: 2rem 0; text-align: center; }
-            .use-case-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; max-width: 900px; margin: 1rem auto; }
-            .use-case-list li { padding: 1rem; background: #f9f9f9; border-radius: 8px; font-size: 1.1rem; }
-            
-            @media (max-width:900px){
-                .showcase-container { flex-direction: column; text-align: center; }
-                .showcase-images{width:100%;}
-                .download-sticky{display:block}
-            }
-            /* Small-screen and landscape improvements */
-            .pricing-table th,.pricing-table td{white-space:normal;word-break:break-word}
-            @media (max-width:600px){
-                .pricing-table th,.pricing-table td{font-size:0.85rem;padding:0.45rem}
-                .gallery-grid img{height:140px;object-fit:cover}
-            }
-            @media (max-width:900px) and (orientation: landscape){
-                .showcase-frame img{height:260px}
-                .gallery-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem}
-                .pricing-table th,.pricing-table td{font-size:0.82rem;padding:0.5rem}
-            }
-            .table-note{font-size:0.92rem;color:#555;margin-top:0.6rem;text-align:center;font-style:italic}
+            /* Checklist styles moved to assets/css/main.css */
         </style>
     </head>
     <body class="is-preload">
@@ -101,11 +46,10 @@
                 <article class="post featured">
                     <header class="major">
                         <span class="date">2026</span>
-                        <h2>Organize your life in seconds — shared with the people who matter.</h2>
-                        <p>Built for the tasks you do over and over. A professional checklist tool that combines recurring routines with our new real-time cloud and sharing technology.</p>
+                        <h2>Organize your life in seconds – share with those who matter.</h2>
+                        <p>Built for the tasks you do over and over. A professional checklist tool that combines repetitive routines with our new real-time cloud and sharing technology.</p>
                         <p style="font-size: 0.9em; margin-top: 0.5em;"><a href="../no/">Åpne norsk versjon</a></p>
-                <script src="/assets/js/checklist-lightbox.js"></script>
-                <footer id="footer">
+                    </header>
 
                     <div class="showcase-container">
                         <div class="showcase-images">
@@ -113,11 +57,8 @@
                             <div class="showcase-frame"><img src="../../images/apps/checklist/en/02.webp" alt="Checklist Detail"></div>
                         </div>
                         <div class="showcase-content">
-                            <h3>Trusted Routines</h3>
-                            <p>Every list is reusable. You do not lose it when you complete it—just reset and use again. Prevent mistakes in tasks you do infrequently and reduce your mental load with our smart cloud solution.</p>
-                            <ul class="actions">
-                                <li><a href="#store-links" class="button primary">Start for free</a></li>
-                            </ul>
+                            <h3>Reusable routines</h3>
+                            <p>Every list is reusable. You don't lose it when you complete it – just reset and use again. Prevent mistakes in tasks you do rarely and reduce your mental load with our smart cloud solution.</p>
                             <div class="badges" id="store-links">
                                 <a href="https://apps.apple.com/us/app/id6751971775" target="_blank"><img src="../../images/apps/badge-appstore.webp" alt="App Store" style="height: 40px;"></a>
                                 <a href="https://play.google.com/store/apps/details?id=com.famravndal.checklist" target="_blank"><img src="../../images/apps/badge-googleplay.webp" alt="Google Play" style="height: 40px;"></a>
@@ -129,104 +70,88 @@
                 <section id="features">
                     <header style="text-align: center;">
                         <h2>Why choose Checklist?</h2>
-                        <p>The perfect balance of powerful features and calm reliability.</p>
+                        <p>The perfect balance between powerful features and calm reliability.</p>
                     </header>
                     <div class="feature-grid">
                         <div class="feature-item">
                             <i class="fas fa-cloud"></i>
-                            <div><strong>New Cloud Solution <span class="new-badge">New</span></strong><div class="muted">Fast, optional cloud sync with automatic backup. Start a list on your phone, finish it on your tablet.</div></div>
+                            <div><strong>New cloud solution <span class="new-badge">New</span></strong><div class="muted">Fast, optional cloud sync with automatic backup. Start a list on your phone, complete it on your tablet.</div></div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-users"></i>
-                            <div><strong>Seamless Sharing <span class="new-badge">New</span></strong><div class="muted">Seamless Sharing Invite family or teammates to collaborate. Perfect for coordinating cabin prep, boat maintenance, or managing complex tasks on the worksite.</div></div>
+                            <div><strong>Seamless sharing <span class="new-badge">New</span></strong><div class="muted">Invite family or colleagues to collaborate. Perfect for coordinating cabin preparations, boat maintenance, or handling complex tasks at work.</div></div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-redo"></i>
-                            <div><strong>Reusable & Recurring</strong><div class="muted">Built for routines. Complete it, reset it with one tap, and it's ready for next time.</div></div>
+                            <div><strong>Reusable and repeatable</strong><div class="muted">Built for routines. Complete it, reset with one tap, and it's ready for next time.</div></div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-map-marked-alt"></i>
-                            <div><strong>Location Triggered</strong><div class="muted">Smart lists that appear automatically when you arrive at the cabin, boat, or worksite.</div></div>
+                            <div><strong>Location-triggered</strong><div class="muted">Smart lists that appear automatically when you arrive at the cabin, boat, or workplace.</div></div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-shield-alt"></i>
-                            <div><strong>Privacy-first</strong><div class="muted">Your data stays yours — developed in Norway with a local-first design that respects your privacy.</div></div>
+                            <div><strong>Privacy first</strong><div class="muted">Your data remains yours – developed in Norway with a local-first design that respects your privacy.</div></div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-brain"></i>
-                            <div><strong>Designed for Calm</strong><div class="muted">No cluttered boards or constant notifications. Just the right steps exactly when and where you need them.</div></div>
+                            <div><strong>Designed for peace</strong><div class="muted">No cluttered boards or constant notifications. Just the right steps exactly when and where you need them.</div></div>
                         </div>
                     </div>
                 </section>
 
-                <article id="pricing">
-                    <header><h2>Plans & Pricing</h2></header>
+                <!-- <article id="pricing">
+                    <header><h2>Levels</h2></header>
                     <div class="pricing-wrap" style="overflow-x: auto;">
                         <table class="pricing-table">
                             <thead>
-                                <tr><th>Feature</th><th>Free</th><th>Standard</th><th class="best-header">Pro</th></tr>
+                                <tr><th>Feature</th><th>Start</th><th>Standard</th><th>Pro</th></tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><strong>Price</strong></td>
-                                    <td><strong>Free</strong></td>
-                                    <td><strong>$3.99</strong><span class="billing-type">One-time payment</span></td>
-                                    <td class="best-col"><strong>$4.99</strong><span class="billing-type">Per month</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Full Year</strong></td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td class="best-col"><strong>$19.99</strong><span class="save-tag">Save 67%</span><span class="billing-type">Billed annually</span></td>
-                                </tr>
                                 <tr>
                                     <td><strong>Checklists</strong></td>
                                     <td>Up to 3</td>
                                     <td>Up to 6</td>
                                     <td class="best-col"><strong>Unlimited</strong></td>
                                 </tr>
-                                <tr><td><strong>Cloud Sync & Backup</strong></td><td>-</td><td>-</td><td class="best-col"><span class="new-badge">New</span></td></tr>
-                                <tr><td>Sharing & Collaboration</td><td>-</td><td>-</td><td class="best-col">✅</td></tr>
-                                <tr><td>Remove Ads</td><td>-</td><td>✅</td><td class="best-col">✅</td></tr>
-                                <tr><td>Offline Access</td><td>✅</td><td>✅</td><td class="best-col">✅</td></tr>
+                                <tr><td><strong>Cloud sync and backup</strong></td><td>-</td><td>-</td><td class="best-col"><span class="new-badge">New</span></td></tr>
+                                <tr><td>Sharing and collaboration</td><td>-</td><td>-</td><td class="best-col">✅</td></tr>
+                                <tr><td>Remove ads</td><td>-</td><td>✅</td><td class="best-col">✅</td></tr>
+                                <tr><td>Offline access</td><td>✅</td><td>✅</td><td class="best-col">✅</td></tr>
                             </tbody>
                         </table>
-                        <p class="table-note">Cloud sync &amp; backup coming in release 2.</p>
+                        <p class="table-note">Cloud sync and backup coming in version 2.</p>
                     </div>
                 </article>
 
                 <article id="new-plans">                    
                     <header>
-                        <h2><span class="new-badge">New</span> Version 2: Cloud Sync &amp; Collaboration</h2>
+                        <h2><span class="new-badge">New</span> Version 2: Cloud Synchronization and Collaboration</h2>
                     </header>
                     
                     <p>
-                        Version 2 introduces our new cloud and sharing platform. This lets you synchronize your checklists across all your devices and collaborate with others in real time. The solution is tailored for coordinating complex routines related to <strong>cabins, RVs, boats, technical maintenance</strong> and <strong>professional workflows</strong>. Automatic backups ensure your critical processes are always protected.
+                        Version 2 introduces our new cloud and sharing platform. This gives you the ability to synchronize your checklists across all devices and collaborate with others in real-time. The solution is tailored for coordinating complex routines related to <strong>cabin, RV, boat, technical maintenance</strong> and <strong>professional work goals</strong>. Automatic backup ensures that your critical processes are always safe.
                     </p>
 
                     <p>
-                        <strong>The Pro subscription</strong> includes full access to cloud features, real-time collaboration and unlimited checklists. Existing Pro users will receive these new capabilities at no additional cost.
+                        <strong>The Pro subscription</strong> includes full access to cloud functionality, real-time collaboration, and unlimited checklists. This is the right choice for you who want a backup in the cloud, be able to share lists with others, coordinate tasks in teams or in the family. Existing Pro users will of course get all the new features included in their current subscription at no extra cost.
                     </p>
 
                     <p>
-                        We continue to offer the <strong>Standard plan</strong> as a one-time purchase for those who prefer a local solution. This plan removes ads and increases the checklist limit, but does not include cloud sync, backup or sharing. The <strong>Free version</strong> remains available with core functionality.
+                        <strong>Launch:</strong> Version 2 is planned to be released during <strong>the first quarter of 2026</strong>.
                     </p>
-
-                    <p>
-                        <strong>Launch:</strong> Version 2 is planned for release in <strong>Q1 2026</strong>.
-                    </p>
-                </article>
+                </article> -->
 
                 <article style="text-align: center; padding: 2rem 2rem;">
-                    <h2 style="font-style: italic;">"Stop asking: What was I supposed to do here again?"</h2>
+                    <h2 style="font-style: italic;">"Stop asking: What was it I was supposed to do here again?"</h2>
                     <p style="text-align: center;"><strong>Start trusting your process.</strong></p>
                     <div class="gallery-grid">
-                        <a href="../../images/apps/checklist/en/03.webp"><img src="../../images/apps/checklist/en/03.webp" alt="Screen 03"></a>
-                        <a href="../../images/apps/checklist/en/04.webp"><img src="../../images/apps/checklist/en/04.webp" alt="Screen 04"></a>
-                        <a href="../../images/apps/checklist/en/05.webp"><img src="../../images/apps/checklist/en/05.webp" alt="Screen 05"></a>
-                        <a href="../../images/apps/checklist/en/06.webp"><img src="../../images/apps/checklist/en/06.webp" alt="Screen 06"></a>
-                        <a href="../../images/apps/checklist/en/07.webp"><img src="../../images/apps/checklist/en/07.webp" alt="Screen 07"></a>
-                        <a href="../../images/apps/checklist/en/08.webp"><img src="../../images/apps/checklist/en/08.webp" alt="Screen 08"></a>
+                        <a href="../../images/apps/checklist/en/03.webp"><img src="../../images/apps/checklist/en/03.webp" alt="Screenshot 03"></a>
+                        <a href="../../images/apps/checklist/en/04.webp"><img src="../../images/apps/checklist/en/04.webp" alt="Screenshot 04"></a>
+                        <a href="../../images/apps/checklist/en/05.webp"><img src="../../images/apps/checklist/en/05.webp" alt="Screenshot 05"></a>
+                        <a href="../../images/apps/checklist/en/06.webp"><img src="../../images/apps/checklist/en/06.webp" alt="Screenshot 06"></a>
+                        <a href="../../images/apps/checklist/en/07.webp"><img src="../../images/apps/checklist/en/07.webp" alt="Screenshot 07"></a>
+                        <a href="../../images/apps/checklist/en/08.webp"><img src="../../images/apps/checklist/en/08.webp" alt="Screenshot 08"></a>
                     </div>
                 </article>
 
@@ -234,11 +159,7 @@
                     <header style="text-align: center;">
                         <h2>Perfect for:</h2>
                     </header>
-                    <style>
-                        /* Checklist styles moved to assets/css/main.css */
-                    </style>
-                    </header>
-                    <ul class="use-case-list">                        
+                    <ul class="use-case-list">
                         <li>🏠 Cabin opening/closing</li>
                         <li>⛵ Boat launching and winter preparation</li>
                         <li>✈️ Travel departure</li>
@@ -246,6 +167,14 @@
                         <li>🏗️ Workplace tasks</li>
                         <li>🗓️ Weekly routines</li>
                     </ul>
+                </section>
+                <section class="posts" style="text-align: center; margin-top: 4rem;" border-top: 0px solid #ddd; padding-top: 2rem;">
+                    <article>
+                        <a href="privacy.html" class="button">Privacy Policy</a>
+                    </article>
+                    <article>
+                        <a href="terms.html" class="button">Terms of Use (EULA)</a>
+                    </article>
                 </section>
             </div>
             
@@ -255,7 +184,6 @@
                     <p>&copy; 2026 Ravndal Studio | Sandnes, Norway | <a href="privacy.html">Privacy Policy</a></p>
                 </section>
             </footer>
-        </div>
 
         <a href="#store-links" class="download-sticky">Download the app</a>
     </body>

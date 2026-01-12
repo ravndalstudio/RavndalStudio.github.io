@@ -16,7 +16,6 @@ function loadNavigation() {
             <ul class="links">
                 <li><a href="index.html">${labels.home}</a></li>
                 <li><a href="about.html">${labels.about}</a></li>
-                <li><a href="services.html">${labels.services}</a></li>
                 <li><a href="portfolio.html">${labels.portfolio}</a></li>
                 <li><a href="contact.html">${labels.contact}</a></li>
             </ul>
