@@ -2,6 +2,7 @@
     // Simple lightbox for gallery images and showcase images
     const selectors = {
         galleryAnchors: '.gallery-grid a',
+        imageAnchors: '.image a',
         showcaseImgs: '.showcase-frame img'
     };
 
@@ -25,11 +26,15 @@
 
     function gatherItems() {
         const items = [];
-        const gallery = Array.from(document.querySelectorAll(selectors.galleryAnchors));
-        gallery.forEach(a => {
+        const anchors = Array.from(document.querySelectorAll(selectors.galleryAnchors))
+            .concat(Array.from(document.querySelectorAll(selectors.imageAnchors)).filter(a => a.querySelector('img')));
+        anchors.forEach(a => {
             const href = a.getAttribute('href');
             const img = a.querySelector('img');
-            items.push({src: href, alt: img ? img.getAttribute('alt') || '' : ''});
+            if (!href) return;
+            if (!items.find(i => i.src === href)) {
+                items.push({src: href, alt: img ? img.getAttribute('alt') || '' : ''});
+            }
         });
         // also add showcase images (if any) that are not duplicate
         const showcases = Array.from(document.querySelectorAll(selectors.showcaseImgs));
@@ -93,8 +98,8 @@
         const items = gatherItems();
         if (!items.length) return;
 
-        // attach click handlers for gallery anchors
-        document.querySelectorAll(selectors.galleryAnchors).forEach((a)=>{
+        // attach click handlers for gallery and image anchors
+        document.querySelectorAll(selectors.galleryAnchors + ', ' + selectors.imageAnchors).forEach((a)=>{
             a.addEventListener('click', function(e){
                 e.preventDefault();
                 const href = a.getAttribute('href');
