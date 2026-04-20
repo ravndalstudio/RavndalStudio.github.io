@@ -10,13 +10,13 @@ function loadApartmentNavigation() {
             <ul class="links">
                 <li><a href="${base}checkin.html">Innsjekk</a></li>
                 <li><a href="${base}parking.html">Parkering</a></li>
-                <li><a href="${base}wifi.html">WiFi</a></li>
+                <li><a href="${base}transport.html">Transport</a></li>
+                <li><a href="${base}wifi.html">WiFi/TV</a></li>
                 <li><a href="${base}equipment.html">Utstyr</a></li>
                 <li><a href="${base}rules.html">Husregler</a></li>
                 <li><a href="${base}trash.html">Søppel</a></li>
                 <li><a href="${base}checkout.html">Utsjekk</a></li>
                 <li><a href="${base}area.html">Området</a></li>
-                <li><a href="${base}contact.html">Kontakt</a></li>
             </ul>
         </nav>
     `;
