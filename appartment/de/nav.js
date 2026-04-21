@@ -2,8 +2,8 @@ function loadApartmentNavigation() {
     if (document.getElementById('nav')) return;
 
     const path = window.location.pathname;
-    const isRoot = !path.includes('/nb/');
-    const base = isRoot ? 'nb/' : '';
+    const isRoot = !path.includes('/en/') && !path.includes('/de/') && !path.includes('/nb/');
+    const base = isRoot ? 'de/' : '';
 
     const navHTML = `
         <style>
@@ -25,34 +25,34 @@ function loadApartmentNavigation() {
             #appartmentNavPanel .panel-inner li:first-child { border-top: 0; }
             #appartmentNavPanel .panel-inner a { display: block; color: #fff; padding: 0.8rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none; }
         </style>
-        <a href="#" id="appartmentNavToggle">Meny</a>
+        <a href="#" id="appartmentNavToggle">Menu</a>
         <nav id="nav">
             <ul class="links">
-                <li><a href="../index.html">Bytt språk</a></li>
-                <li><a href="${base}checkin.html">Innsjekk</a></li>
-                <li><a href="${base}parking.html">Parkering</a></li>
+                <li><a href="../index.html">Sprache</a></li>
+                <li><a href="${base}checkin.html">Check-in</a></li>
+                <li><a href="${base}parking.html">Parken</a></li>
+                <li><a href="${base}wifi.html">WiFi</a></li>
                 <li><a href="${base}transport.html">Transport</a></li>
-                <li><a href="${base}wifi.html">WiFi/TV</a></li>
-                <li><a href="${base}equipment.html">Utstyr</a></li>
-                <li><a href="${base}rules.html">Husregler</a></li>
-                <li><a href="${base}trash.html">Søppel</a></li>
-                <li><a href="${base}checkout.html">Utsjekk</a></li>
-                <li><a href="${base}area.html">Området</a></li>
+                <li><a href="${base}equipment.html">Ausstattung</a></li>
+                <li><a href="${base}rules.html">Hausregeln</a></li>
+                <li><a href="${base}trash.html">Müll</a></li>
+                <li><a href="${base}checkout.html">Check-out</a></li>
+                <li><a href="${base}area.html">Umgebung</a></li>
             </ul>
         </nav>
         <div id="appartmentNavPanel">
             <div class="panel-inner">
                 <ul class="links">
-                    <li><a href="../index.html">Bytt språk</a></li>
-                    <li><a href="${base}checkin.html">Innsjekk</a></li>
-                    <li><a href="${base}parking.html">Parkering</a></li>
+                    <li><a href="../index.html">Sprache</a></li>
+                    <li><a href="${base}checkin.html">Check-in</a></li>
+                    <li><a href="${base}parking.html">Parken</a></li>
+                    <li><a href="${base}wifi.html">WiFi</a></li>
                     <li><a href="${base}transport.html">Transport</a></li>
-                    <li><a href="${base}wifi.html">WiFi/TV</a></li>
-                    <li><a href="${base}equipment.html">Utstyr</a></li>
-                    <li><a href="${base}rules.html">Husregler</a></li>
-                    <li><a href="${base}trash.html">Søppel</a></li>
-                    <li><a href="${base}checkout.html">Utsjekk</a></li>
-                    <li><a href="${base}area.html">Området</a></li>
+                    <li><a href="${base}equipment.html">Ausstattung</a></li>
+                    <li><a href="${base}rules.html">Hausregeln</a></li>
+                    <li><a href="${base}trash.html">Müll</a></li>
+                    <li><a href="${base}checkout.html">Check-out</a></li>
+                    <li><a href="${base}area.html">Umgebung</a></li>
                 </ul>
             </div>
         </div>
